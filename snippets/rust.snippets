@@ -1,0 +1,11 @@
+snippet fn
+    fn ${1:name}($2)$3 {
+        ${4:unimplemented!();}
+    }
+
+snippet mod-tests
+	#[cfg(test)]
+	mod tests {
+		use super::*;
+		$0
+	}
