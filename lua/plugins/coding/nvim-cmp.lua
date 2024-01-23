@@ -113,7 +113,7 @@ return {
             fallback()
           end
         end, { "i", "s" }),
-        ["<C-n>"] = cmp.mapping(function()
+        ["<A-n>"] = cmp.mapping(function()
           if cmp.visible() then
             cmp.close()
           else
