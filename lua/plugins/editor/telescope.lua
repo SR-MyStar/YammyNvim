@@ -44,12 +44,12 @@ return {
             focusable = false,
             border = {
               style = {
-                top = "", -- "─",
+                top = "",
                 right = "│",
                 bottom = "─",
                 left = "│",
-                top_left = "", -- "├",
-                top_right = "", --"┤",
+                top_left = "",
+                top_right = "",
                 bottom_right = "┘",
                 bottom_left = "└",
               },
