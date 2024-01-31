@@ -1,5 +1,9 @@
-local dap = star.path.Extras.dap
-
 return {
-  { import = dap .. ".core" },
+  "catppuccin",
+  optional = true,
+  opts = {
+    integrations = {
+      dap = { enabled = true, enable_ui = true },
+    },
+  },
 }

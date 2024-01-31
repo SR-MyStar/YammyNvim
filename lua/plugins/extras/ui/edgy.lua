@@ -1,5 +1,14 @@
-local ui = star.path.Extras.ui
-
 return {
-  { import = ui .. ".edgy" },
+  "folke/edgy.nvim",
+  opts = {
+    top = {
+      {
+        ft = "terminal",
+        size = { height = 0.3 },
+        filter = function(buf, win)
+          return vim.api.nvim_win_get_config(win).relative == ""
+        end,
+      },
+    },
+  },
 }

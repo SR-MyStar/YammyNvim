@@ -1,5 +1,6 @@
-local util = star.path.Extras.util
-
 return {
-  { import = util .. ".dot" },
+  "nvim-treesitter/nvim-treesitter",
+  opts = {
+    ensure_installed = { "hyprlang" },
+  },
 }

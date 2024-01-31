@@ -1,5 +1,4 @@
 ---@class star.path
----@field Extras  star.path.Extras
 ---@field Plugins star.path.Plugins
 local M = setmetatable({}, {
   __index = function(t, k)

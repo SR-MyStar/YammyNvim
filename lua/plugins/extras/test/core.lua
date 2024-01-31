@@ -1,5 +1,7 @@
-local test = star.path.Extras.test
-
 return {
-  { import = test .. ".core" },
+  "catppuccin",
+  optional = true,
+  opts = {
+    integrations = { neotest = true },
+  },
 }

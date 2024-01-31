@@ -13,21 +13,19 @@
     "lazyvim.plugins.extras.ui.edgy",
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.project",
-    "plugins.extras.coding.codeium",
     "plugins.extras.coding.nvim-surround",
-    "plugins.extras.editor.overseer",
     "plugins.extras.dap.core",
-    "plugins.extras.dap.nlua",
     "plugins.extras.editor.aerial",
     "plugins.extras.lang.clangd",
-    "plugins.extras.lang.cmake",
-    "plugins.extras.lang.json",
     "plugins.extras.lang.markdown",
     "plugins.extras.lang.rust",
+    "plugins.extras.overseer.core",
+    "plugins.extras.overseer.nvim-dap",
+    "plugins.extras.overseer.neotest",
+    "plugins.extras.overseer.toggleterm",
     "plugins.extras.test.core",
     "plugins.extras.ui.edgy",
-    "plugins.extras.util.dot",
-    "plugins.extras.util.project"
+    "plugins.extras.util.dot"
   ],
   "news": {
     "NEWS.md": "2123"

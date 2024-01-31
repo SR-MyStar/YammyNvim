@@ -1,5 +1,9 @@
-local lang = star.path.Extras.lang
-
 return {
-  { import = lang .. ".rust" },
+  "simrat39/rust-tools.nvim",
+  lazy = true,
+  opts = {
+    tools = {
+      inlay_hints = { auto = false },
+    },
+  },
 }
