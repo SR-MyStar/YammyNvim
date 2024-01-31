@@ -2,6 +2,7 @@ local Util = require("lazyvim.util")
 
 return {
   keys = {
+    name = "lazy/yazi",
     ["l"] = { "<cmd>Lazy<cr>", "Lazy" },
     ["L"] = {
       function()
