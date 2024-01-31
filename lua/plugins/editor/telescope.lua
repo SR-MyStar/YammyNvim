@@ -6,9 +6,11 @@ local TSLayout = require("telescope.pickers.layout")
 
 local function make_popup(options)
   local popup = require("nui.popup")(options)
+  ---@diagnostic disable-next-line: inject-field
   function popup.border:change_title(title)
     popup.border.set_text(popup.border, "top", title)
   end
+  ---@diagnostic disable-next-line: param-type-mismatch
   return TSLayout.Window(popup)
 end
 
@@ -94,9 +96,13 @@ return {
               Layout.Box(results, { size = "55%" }),
             }, { dir = "col" })
           )
+          ---@diagnostic disable-next-line: inject-field
           layout.results = results
+          ---@diagnostic disable-next-line: inject-field
           layout.prompt = prompt
+          ---@diagnostic disable-next-line: inject-field
           layout.preview = preview
+          ---@diagnostic disable-next-line: param-type-mismatch
           return TSLayout(layout)
         end,
       },
