@@ -30,16 +30,10 @@ return {
         sorting_strategy = "ascending",
         layout_config = {
           horizontal = {
-            size = {
-              width = "100%",
-              height = "100%",
-            },
+            size = { width = "100%", height = "100%" },
           },
           vertical = {
-            size = {
-              width = "100%",
-              height = "100%",
-            },
+            size = { width = "100%", height = "100%" },
           },
         },
         prompt_prefix = "  ",
@@ -89,18 +83,11 @@ return {
                 bottom_right = "",
                 bottom_left = "",
               },
-              text = {
-                top = picker.prompt_title,
-                top_align = "center",
-              },
+              text = { top = picker.prompt_title, top_align = "center" },
             },
           })
           local layout = Layout(
-            {
-              relative = "editor",
-              position = "50%",
-              size = "90%",
-            },
+            { relative = "editor", position = "50%", size = "90%" },
             Layout.Box({
               Layout.Box(preview, { size = "45%" }),
               Layout.Box(prompt, { size = 2 }),
@@ -123,12 +110,7 @@ return {
           end,
           desc = "Find Builtin",
         },
-        {
-          "<leader>i",
-          "<leader>fi",
-          desc = "Find Builtin",
-          remap = true,
-        },
+        { "<leader>i", "<leader>fi", desc = "Find Builtin", remap = true },
       })
     end,
   },
