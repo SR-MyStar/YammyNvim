@@ -104,17 +104,15 @@ return {
         end,
       },
     },
-    keys = function(_, keys)
-      keys = vim.list_extend(keys, {
-        {
-          "<leader>fi",
-          function()
-            require("telescope.builtin").builtin()
-          end,
-          desc = "Find Builtin",
-        },
-        { "<leader>i", "<leader>fi", desc = "Find Builtin", remap = true },
-      })
-    end,
+    keys = {
+      {
+        "<leader>fi",
+        function()
+          require("telescope.builtin").builtin()
+        end,
+        desc = "Find Builtin",
+      },
+      { "<leader>i", "<leader>fi", desc = "Find Builtin", remap = true },
+    },
   },
 }
