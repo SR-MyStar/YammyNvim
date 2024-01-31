@@ -1,6 +1,3 @@
-local ICONS = star.opt.icons
-local TELESCOPE = {}
-
 local Layout = require("nui.layout")
 local TSLayout = require("telescope.pickers.layout")
 
