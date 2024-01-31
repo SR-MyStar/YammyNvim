@@ -48,7 +48,7 @@ return {
         function()
           local col = vim.api.nvim_win_get_cursor(0)[2]
           require("flash").jump({
-            labels = "-jfkdls;a hg'urytieowpqnbvmc[,x.z/]",
+            labels = "jfkdls;a hg'urytieowpqnbvmc,x.z/",
             jump = { offset = col },
             search = {
               multi_window = false,
