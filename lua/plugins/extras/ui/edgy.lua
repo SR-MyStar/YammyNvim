@@ -1,7 +1,7 @@
 return {
   "folke/edgy.nvim",
-  opts = {
-    top = {
+  opts = function(_, opts)
+    opts.top = vim.list_extend(opts.top or {}, {
       {
         ft = "terminal",
         size = { height = 0.3 },
@@ -9,6 +9,6 @@ return {
           return vim.api.nvim_win_get_config(win).relative == ""
         end,
       },
-    },
-  },
+    })
+  end,
 }
