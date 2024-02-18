@@ -3,7 +3,6 @@ return {
   lazy = true,
   cmd = { "TodoTrouble", "TodoTelescope" },
   event = { "BufReadPost", "BufNewFile" },
-  config = true,
   opts = {
     keywords = {
       FIX = {
