@@ -1,6 +1,9 @@
 return {
   "JoosepAlviste/nvim-ts-context-commentstring",
   opts = {
-    config = { cpp = "// %s" },
+    config = {
+      cpp = "// %s",
+      kdl = "// %s",
+    },
   },
 }
