@@ -1,5 +1,13 @@
 return {
   {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    opts = {
+      config = {
+        cpp = "// %s",
+      },
+    },
+  },
+  {
     "p00f/clangd_extensions.nvim",
     lazy = true,
     ft = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
