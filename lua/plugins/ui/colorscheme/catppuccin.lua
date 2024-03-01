@@ -1,6 +1,29 @@
-local function custom_highlights(c)
+local opts = {
+  compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
+
+  term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
+  transparent_background = true,
+  integrations = {
+    gitsigns = true,
+    illuminate = true,
+    notify = true,
+    semantic_tokens = true,
+    indent_blankline = {
+      enabled = true,
+      scope_color = "blue", -- catppuccin color (eg. `lavender`) Default: text
+      colored_indent_levels = false,
+    },
+    lsp_trouble = true,
+    mini = {
+      enabled = true,
+      indentscope_color = "blue", -- catppuccin color (eg. `lavender`) Default: text
+    },
+  },
+}
+
+function opts.custom_highlights(c)
   local function is(color1, color2)
-    if O.transparent_background then
+    if opts.transparent_background then
       return color1
     else
       return color2
@@ -123,27 +146,5 @@ return {
   name = "catppuccin",
   lazy = true,
   priority = 1000,
-  opts = {
-    compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
-
-    term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
-    transparent_background = true,
-    custom_highlights = custom_highlights,
-    integrations = {
-      gitsigns = true,
-      illuminate = true,
-      notify = true,
-      semantic_tokens = true,
-      indent_blankline = {
-        enabled = true,
-        scope_color = "blue", -- catppuccin color (eg. `lavender`) Default: text
-        colored_indent_levels = false,
-      },
-      lsp_trouble = true,
-      mini = {
-        enabled = true,
-        indentscope_color = "blue", -- catppuccin color (eg. `lavender`) Default: text
-      },
-    },
-  },
+  opts = opts,
 }
