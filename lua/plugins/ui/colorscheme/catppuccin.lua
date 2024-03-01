@@ -29,6 +29,7 @@ function opts.custom_highlights(c)
       return color2
     end
   end
+
   local function reverse(highlight_group)
     return {
       fg = highlight_group.bg,
@@ -36,7 +37,8 @@ function opts.custom_highlights(c)
         or highlight_group.fg,
     }
   end
-  local highlights = {
+
+  local h = {
     CmpItemAbbr = { fg = c.overlay2 },
     CmpItemMenu = { fg = c.overlay1 },
     CmpItemKindSnippet = { fg = c.base, bg = c.mauve },
@@ -105,40 +107,39 @@ function opts.custom_highlights(c)
 
     DropBarIconUISeparator = { fg = c.text },
   }
-  highlights.DropBarIconKindDeclaration = reverse(highlights.CmpItemKindSnippet)
-  highlights.DropBarIconKindIdentifier = reverse(highlights.CmpItemKindVariable)
-  highlights.DropBarIconKindPackage = reverse(highlights.CmpItemKindModule)
-  highlights.DropBarIconKindKeyword = reverse(highlights.CmpItemKindKeyword)
-  highlights.DropBarIconKindType = reverse(highlights.CmpItemKindClass)
-  highlights.DropBarIconKindText = reverse(highlights.CmpItemKindText)
-  highlights.DropBarIconKindMethod = reverse(highlights.CmpItemKindMethod)
-  highlights.DropBarIconKindConstructor =
-    reverse(highlights.CmpItemKindConstructor)
-  highlights.DropBarIconKindFunction = reverse(highlights.CmpItemKindFunction)
-  highlights.DropBarIconKindFolder = reverse(highlights.CmpItemKindFolder)
-  highlights.DropBarIconKindModule = reverse(highlights.CmpItemKindModule)
-  highlights.DropBarIconKindConstant = reverse(highlights.CmpItemKindConstant)
-  highlights.DropBarIconKindField = reverse(highlights.CmpItemKindField)
-  highlights.DropBarIconKindProperty = reverse(highlights.CmpItemKindProperty)
-  highlights.DropBarIconKindEnum = reverse(highlights.CmpItemKindEnum)
-  highlights.DropBarIconKindUnit = reverse(highlights.CmpItemKindUnit)
-  highlights.DropBarIconKindClass = reverse(highlights.CmpItemKindClass)
-  highlights.DropBarIconKindVariable = reverse(highlights.CmpItemKindVariable)
-  highlights.DropBarIconKindFile = reverse(highlights.CmpItemKindFile)
-  highlights.DropBarIconKindInterface = reverse(highlights.CmpItemKindInterface)
-  highlights.DropBarIconKindColor = reverse(highlights.CmpItemKindColor)
-  highlights.DropBarIconKindReference = reverse(highlights.CmpItemKindReference)
-  highlights.DropBarIconKindEnumMember =
-    reverse(highlights.CmpItemKindEnumMember)
-  highlights.DropBarIconKindStruct = reverse(highlights.CmpItemKindStruct)
-  highlights.DropBarIconKindValue = reverse(highlights.CmpItemKindValue)
-  highlights.DropBarIconKindEvent = reverse(highlights.CmpItemKindEvent)
-  highlights.DropBarIconKindOperator = reverse(highlights.CmpItemKindOperator)
-  highlights.DropBarIconKindTypeParameter =
-    reverse(highlights.CmpItemKindTypeParameter)
-  highlights.DropBarIconKindCopilot = reverse(highlights.CmpItemKindCopilot)
-  highlights.DropBarIconKindCodeium = reverse(highlights.CmpItemKindCodeium)
-  return highlights
+
+  h.DropBarIconKindDeclaration = reverse(h.CmpItemKindSnippet)
+  h.DropBarIconKindIdentifier = reverse(h.CmpItemKindVariable)
+  h.DropBarIconKindPackage = reverse(h.CmpItemKindModule)
+  h.DropBarIconKindKeyword = reverse(h.CmpItemKindKeyword)
+  h.DropBarIconKindType = reverse(h.CmpItemKindClass)
+  h.DropBarIconKindText = reverse(h.CmpItemKindText)
+  h.DropBarIconKindMethod = reverse(h.CmpItemKindMethod)
+  h.DropBarIconKindConstructor = reverse(h.CmpItemKindConstructor)
+  h.DropBarIconKindFunction = reverse(h.CmpItemKindFunction)
+  h.DropBarIconKindFolder = reverse(h.CmpItemKindFolder)
+  h.DropBarIconKindModule = reverse(h.CmpItemKindModule)
+  h.DropBarIconKindConstant = reverse(h.CmpItemKindConstant)
+  h.DropBarIconKindField = reverse(h.CmpItemKindField)
+  h.DropBarIconKindProperty = reverse(h.CmpItemKindProperty)
+  h.DropBarIconKindEnum = reverse(h.CmpItemKindEnum)
+  h.DropBarIconKindUnit = reverse(h.CmpItemKindUnit)
+  h.DropBarIconKindClass = reverse(h.CmpItemKindClass)
+  h.DropBarIconKindVariable = reverse(h.CmpItemKindVariable)
+  h.DropBarIconKindFile = reverse(h.CmpItemKindFile)
+  h.DropBarIconKindInterface = reverse(h.CmpItemKindInterface)
+  h.DropBarIconKindColor = reverse(h.CmpItemKindColor)
+  h.DropBarIconKindReference = reverse(h.CmpItemKindReference)
+  h.DropBarIconKindEnumMember = reverse(h.CmpItemKindEnumMember)
+  h.DropBarIconKindStruct = reverse(h.CmpItemKindStruct)
+  h.DropBarIconKindValue = reverse(h.CmpItemKindValue)
+  h.DropBarIconKindEvent = reverse(h.CmpItemKindEvent)
+  h.DropBarIconKindOperator = reverse(h.CmpItemKindOperator)
+  h.DropBarIconKindTypeParameter = reverse(h.CmpItemKindTypeParameter)
+  h.DropBarIconKindCopilot = reverse(h.CmpItemKindCopilot)
+  h.DropBarIconKindCodeium = reverse(h.CmpItemKindCodeium)
+
+  return h
 end
 
 return {
