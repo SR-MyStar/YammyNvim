@@ -12,8 +12,13 @@ return {
     opts = {
       ensure_installed = {
         "bash-language-server",
-        "shellcheck",
+        "beautysh",
         "shfmt",
+
+        "standardjs",
+        "htmlbeautifier",
+
+        "shellcheck",
       },
     },
   },
