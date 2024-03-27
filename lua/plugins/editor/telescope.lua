@@ -39,59 +39,35 @@ return {
         border = true,
         results_title = false,
         create_layout = function(picker)
+          local border = {
+            results = { "", "", "", "│", "┘", "─", "─", "" },
+            prompt = { "─", "─", "┐", "│", "", "", "", "" },
+            preview = { "┌", "─", "", "", "", "─", "└", "│" },
+          }
           local results = make_popup({
             focusable = false,
-            border = {
-              style = {
-                top = "",
-                right = "│",
-                bottom = "─",
-                left = "│",
-                top_left = "",
-                top_right = "",
-                bottom_right = "┘",
-                bottom_left = "└",
-              },
-            },
+            border = { style = border.results },
           })
           local prompt = make_popup({
             enter = true,
-            border = {
-              style = {
-                top = "─",
-                right = "│",
-                bottom = "",
-                left = "│",
-                top_left = "├",
-                top_right = "┤",
-                bottom_right = "",
-                bottom_left = "",
-              },
-            },
+            border = { style = border.prompt },
           })
           local preview = make_popup({
             focusable = false,
             border = {
-              style = {
-                top = "─",
-                right = "│",
-                bottom = "",
-                left = "│",
-                top_left = "┌",
-                top_right = "┐",
-                bottom_right = "",
-                bottom_left = "",
-              },
-              text = { top = picker.prompt_title, top_align = "center" },
+              style = border.preview,
+              text = { top = picker.prompt_title, top_align = "left" },
             },
           })
           local layout = Layout(
-            { relative = "editor", position = "50%", size = "90%" },
+            { relative = "editor", position = "50%", size = "85%" },
             Layout.Box({
-              Layout.Box(preview, { size = "45%" }),
-              Layout.Box(prompt, { size = 2 }),
-              Layout.Box(results, { size = "55%" }),
-            }, { dir = "col" })
+              Layout.Box(preview, { size = "41%" }),
+              Layout.Box({
+                Layout.Box(prompt, { size = 2 }),
+                Layout.Box(results, { grow = 1 }),
+              }, { dir = "col", size = "60%" }),
+            }, { dir = "row" })
           )
           ---@diagnostic disable-next-line: inject-field
           layout.results = results
