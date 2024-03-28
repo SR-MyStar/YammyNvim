@@ -1,7 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.codeium",
-    "lazyvim.plugins.extras.editor.aerial",
+    "lazyvim.plugins.extras.editor.outline",
     "lazyvim.plugins.extras.lang.clangd",
     "lazyvim.plugins.extras.lang.json",
     "lazyvim.plugins.extras.lang.markdown",
@@ -12,7 +12,7 @@
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.project",
     "plugins.extras.coding.nvim-surround",
-    "plugins.extras.editor.aerial",
+    "plugins.extras.editor.outline",
     "plugins.extras.lang.clangd",
     "plugins.extras.lang.markdown",
     "plugins.extras.lang.rust",
