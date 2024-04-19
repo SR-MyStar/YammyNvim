@@ -10,8 +10,6 @@ return {
       ksh = { "beautysh" },
       zsh = { "beautysh" },
       mksh = { "shfmt" },
-      javascript = { "clang_format", "standardjs" },
-      html = { "htmlbeautifier" },
     },
   },
 }

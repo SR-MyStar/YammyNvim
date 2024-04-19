@@ -15,9 +15,6 @@ return {
         "beautysh",
         "shfmt",
 
-        "standardjs",
-        "htmlbeautifier",
-
         "shellcheck",
       },
     },
